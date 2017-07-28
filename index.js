@@ -1,8 +1,20 @@
-var express = require('express');
-var app = express();
+var express = require('express')
+var bodyParser = require('body-parser')
+var app = express()
+var cors = require('cors')
+
+app.use(cors())
+app.use(bodyParser.json())
+
+app.set('port', (process.env.PORT || 4000))
+app.use(bodyParser.urlencoded({extended: false}))
+app.use(bodyParser.json())
+
 
 app.get('/', function (req, res) {
-  res.send('<h1>This is Line Bot project.</h1>');
-});
+	res.send('Hello')
+})
 
-app.listen(process.env.PORT || 3000);
+app.listen(app.get('port'), function () {
+  console.log('run at port', app.get('port'))
+})
