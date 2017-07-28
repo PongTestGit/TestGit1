@@ -1,0 +1,17 @@
+{
+  "name": "node-js-starter-project",
+  "version": "1.0.0",
+  "description": "Node.js starter project",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aofleejay/node-js-starter-project"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "aofsite.com",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
